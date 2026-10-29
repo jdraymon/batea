@@ -1,4 +1,4 @@
-# 0003: Agent under test is Claude Code headless on Sonnet 5.5
+# 0002: Agent under test is Claude Code headless on Sonnet 5.5
 
 - **Date:** 2026-10-29
 - **Decision:** The agent under test is Claude Code in headless mode with `--model claude-sonnet-5-5`. The model is pinned by alias only; each run records the model reported in its stream-json `init` event. The Claude Code version is pinned in the per-arm container image, and each run records the image digest. All arms in the pilot and main batch use the same image and alias.
